@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Teste</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>BUENAS, TCHÊ!</h1>
+    </header>
+
+    <main class="container">
+      <div class="row">
+        <button class="btn btn1" id="cor1">Cor 1</button>
+        <button class="btn btn2" id="cor2">Cor 2</button>
+      </div>
+      <div class="row">
+        <button class="btn btn3" id="cor3">Cor 3</button>
+        <button class="btn btn4" id="cor4">Cor 4</button>
+      </div>
+      <div class="row">
+        <button class="btn btn5" id="cor5">Cor 5</button>
+        <button class="btn btn6" id="cor6">Cor 6</button>
+      </div>
+    </main>
+
+    <div class="footer">
+      <h2>Site teste</h2>
+      <p>
+        Clique nos botões para ver os códigos hexadecimais das cores
+        correspondentes.
+      </p>
+      <button class="btn btn6" id="bah">Bah</button>
+    </div>
+
+    <script>
+      const cores = {
+        cor1: "#1E88E5",
+        cor2: "#43A047",
+        cor3: "#F4511E",
+        cor4: "#FB8C00",
+        cor5: "#8E24AA",
+        cor6: "#546E7A",
+      };
+
+      Object.entries(cores).forEach(([id, corHex]) => {
+        const botao = document.getElementById(id);
+        if (botao) {
+          botao.addEventListener("click", () => {
+            alert(`Código hexadecimal da cor: ${corHex}`);
+          });
+        }
+      });
+
+      document.getElementById("bah").addEventListener("click", () => {
+        alert(
+          "Bah, o Armandinho é o terror, né, meu? Bah, eu fico no horror com esse louco — é um poeta, né, meu? Bah... Não tem quem não goste do louco, o pinta é afudê. Ô, meuzinho, tô me largando lá pra Tubarão com os meus bruxos aqui de Floripa. Vou ver se pego um corpinho hoje lá. Bah... Vamos ver, né, meu? Vamo pra cima, Grêmio! Fiu fiu!"
+        );
+      });
+    </script>
+  </body>
+</html>
